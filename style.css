@@ -1,0 +1,345 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.4;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #4a4a4a;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    justify-content: space-between;
+    height: 5vh;
+    width: 100vw;
+    background-color: rgb(240, 240, 232);
+    position: fixed;
+    z-index: 1000;
+    /*permet de garder la nav bar par dessus tout*/
+}
+
+.nav-menu {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vw;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #4a4a4a;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.nav-menu a:hover {
+    background-color: #d25d2c;
+    color: #f0f0e8;
+    transition: 0.6s;
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1vw;
+}
+
+.fa-brands {
+    text-decoration: none;
+    margin-left: 1vw;
+    color: #4a4a4a;
+}
+
+
+/* Home Section */
+
+.home-section {
+    background-image: url('./img/background.jpg');
+    background-size: cover;
+    color: rgb(240, 240, 232);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 25vh;
+    flex-direction: column;
+}
+
+.home-section h1 {
+    font-size: 50px;
+}
+
+.home-section p {
+    font-size: 2.4vh;
+    margin: 0px 100px 0px 100px;
+    text-align: center;
+}
+
+#scrollToTop {
+    background-color: #d25d2c;
+    color: #f7f6ee;
+    margin: 5vh;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    z-index: 100;
+    /*pour qu'il passe par dessus les compétences. C'est les calques un peu*/
+    right: 1%;
+    bottom: 1%;
+    display: none;
+}
+
+#scrollToTop:hover {
+    transform: scale(1.2);
+    border: none;
+    transition: 0.5s;
+}
+
+
+/* About Section */
+.about {
+    padding: 70px 20px 70px 20px;
+    background-color: #f0f0e8;
+    text-align: center;
+}
+
+.about h2 {
+    padding-top: 20px;
+    font-size: 2em;
+    color: #d25d2c;
+    margin-bottom: 40px;
+}
+
+.about p {
+    margin-bottom: 90px;
+    padding: 0.5vh 25vw;
+    font-size: 15px;
+}
+
+/* Skills Section */
+.skills-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 0px 20px;
+    background-color: #f7f6ee;
+}
+
+.skill img {
+    width: 20vh;
+    padding: 10px;
+    border-radius: 100%;
+    background-color: #f7f6ee;
+}
+
+.skill h3 {
+    font-size: 3vh;
+    margin: 20px 0;
+}
+
+.skill p {
+    font-size: 1.8vh;
+    color: #7a7a7a;
+    margin-bottom: 5px;
+    max-width: 22vw;
+}
+
+.skill {
+    position: relative;
+    /*pour décaler l'élément par dessus les autres*/
+    top: -80px;
+    text-align: center;
+}
+
+
+/* Projects Section */
+
+.projects-section {
+    height: 100%;
+    width: 100%;
+    background-color: #f0f0e8;
+}
+
+.projects-section h2 {
+    position: relative;
+    top: 90px;
+    font-size: 2em;
+    color: #f0f0e8;
+    text-align: center;
+    z-index: 4;
+}
+
+.projects {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    justify-content: center;
+}
+
+
+.slide {
+    transition: opacity 0.5s ease-in-out;
+    /*transition*/
+    position: absolute;
+    /*superpose les slides */
+    display: flex;
+}
+
+.slide img {
+    width: 98.9vw;
+    /*ça laisse un petit espace blanc mais je n'arrive toujours pas à 
+    faire en sorte que cela ne dépasse pas.*/
+    height: 100vh;
+    object-fit: cover;
+}
+
+.projects-section button:hover {
+    transform: scale(1.1);
+    color: #d25d2c;
+}
+
+.projects-section button {
+    font-size: 10vh;
+    background: none;
+    color: #9d9d99;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.5s;
+    z-index: 7;
+}
+
+.next-slides {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+/* FOOTER */
+.contact-section {
+    padding: 50px 20px;
+    background-color: #f0f0e8;
+    text-align: center;
+}
+
+.contact-section h2 {
+    padding-top: 40px;
+    font-size: 2em;
+    color: #d25d2c;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+}
+
+/* FORMULAIRE */
+form {
+    width: 50%;
+    margin: 50px;
+    padding: 60px;
+    background-color: #f7f6ee;
+    border: 1px solid #f0f0e8;
+    border-radius: 10px;
+}
+
+form p {
+    color: #d25d2c;
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+textarea {
+    resize: none;
+    font-family: sans-serif;
+}
+
+input[type="submit"] {
+    width: auto;
+    color: white;
+    background-color: #d25d2c;
+    border-radius: 5px;
+    border: 1px solid white;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+input[type="submit"]:hover {
+    transform: scale(1.1);
+    border: 1px solid white;
+}
+
+
+/*FOOTER */
+footer {
+    background-color: #4a4a4a;
+    color: #f0f0e8;
+    text-align: center;
+    padding: 40px;
+    width: 100%;
+}
+
+footer a {
+    color: #f0f0e8;
+}
+
+
+
+/*MEDIA QUERY */
+@media (max-width: 600px) {
+    .home-section h1 {
+        font-size: 30px;
+    }
+
+    .about p {
+        padding: 0 50px 0 50px;
+    }
+}
+
+@media (max-width: 950px) {
+    .skills-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill {
+        width: 50%;
+        padding-bottom: 20px;
+        justify-items: center;
+    }
+
+    .skill p {
+        max-width: none;
+    }
+
+    form {
+        width: 70%;
+    }
+}

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Portfolio de Mattéo Frappier, étudiant en premère année de master en Expert du Design Numérique.">
+    <meta name="keywords"
+        content="portfolio, projets, design, graphique, adobe, indesign, photoshop, illustrator, webdesign, web,">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="./style.css">
+    <title>Mattéo Frappier - Portfolio</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="./index.html">Accueil</a></li>
+                <li><a href="#about">À Propos</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="social-media">
+            <a href="https://www.linkedin.com" target="_blank" aria-label="Compte Linkedin"><i
+                    class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.instagram.com" target="_blank" aria-label="Compte Instagram"><i
+                    class="fa-brands fa-square-instagram"></i></a>
+            <a href="https://www.x.com" target="_blank" aria-label="Compte X"><i
+                    class="fa-brands fa-square-x-twitter"></i></a>
+        </div>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="home-section">
+        <h1>MON PORTFOLIO</h1>
+        <p>Plongez dans mon univers et découvrez mes compétences !</p>
+        <!-- Scrool Button -->
+        <button id="scrollToTop">↑</button>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>Qui suis-je ?</h2>
+        <p>Je m'appelle <b>Mattéo Frappier</b>, j'ai 21 ans et je suis étudiant en <b>master Design Numérique</b>.
+            Passionné par l'art,
+            le design et la musique, je cherche toujours à allier <b>créativité et technologie</b> dans mes projets.</p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="skill">
+            <img src="./img/icon1.png" alt="Icône de design graphique">
+            <h3>Design Graphique</h3>
+            <p>Une maîtrise des outils graphiques et un sens aigu de l'esthétique. Une approche alliant créativité et
+                stratégie
+                pour donner vie à des projets innovants et visuellement percutants, adaptés à chaque besoin spécifique
+            </p>
+        </div>
+        <div class="skill">
+            <img src="./img/icon2.png" alt="Icône de développement web">
+            <h3>Développement Web</h3>
+            <p>Une expertise en technologies modernes et une attention particulière aux détails. Une approche qui marie
+                design et développement pour créer des sites web intuitifs, performants et accessibles, répondant
+                parfaitement aux attentes des utilisateurs.</p>
+        </div>
+        <div class="skill">
+            <img src="./img/icon3.png" alt="Icône de communication">
+            <h3>Communication</h3>
+            <p>Une capacité à transmettre des messages impactants, grâce à une écoute attentive et une
+                compréhension des besoins. Une approche stratégique et créative pour concevoir des campagnes
+                engageantes et des contenus qui connectent les marques à leur public.</p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <h2 class="projects-title">Découvrez mes projets !</h2>
+        <div class="projects">
+            <div class="slide">
+                <img src="./img/project-1-nikon.jpg" alt="Projet n°1">
+            </div>
+            <div class="slide">
+                <img src="./img/project-2-conforama.jpg" alt="Projet n°2">
+            </div>
+            <div class="slide">
+                <img src="./img/project-3-s2e.jpg" alt="Projet n°3">
+            </div>
+            <div class="next-slides">
+                <button id="prevSlide">〈</button>
+                <button id="nextSlide">〉</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2>N'hésitez pas à me contacter</h2>
+
+        <div class="form-container">
+            <!-- FORMULAIRE -->
+            <form id="contactForm" method="GET">
+                <div>
+                    <label for="firstName">Prénom</label>
+                    <input type="text" name="firstName" id="firstName" placeholder="John">
+                </div>
+                <p id="firstNameError"></p>
+                <div>
+                    <label for="lastName">Nom</label>
+                    <input type="text" name="lastName" id="lastName" placeholder="Doe">
+                </div>
+                <p id="lastNameError"></p>
+                <div>
+                    <label for="email">Adresse e-mail</label>
+                    <input type="email" name="email" id="email" placeholder="exemple@gmail.com">
+                </div>
+                <p id="emailError"></p>
+                <div>
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" placeholder="Votre message"></textarea>
+                </div>
+                <p id="messageError"></p>
+                <input class="submit-form" type="submit" value="Envoyer">
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>Portfolio - © Mattéo Frappier - <a href="mailto:matteofrap22@gmail.com">matteofrap22@gmail.com</a></p>
+    </footer>
+
+    <script src="./script.js" defer></script>
+</body>
+
+</html>
